@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from 'src/app/theme/shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { ApiComponent } from 'src/app/api/api/api.component';
-import { from } from 'rxjs';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { from } from 'rxjs';
+import { FormBuilder, FormGroup,  } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-in',

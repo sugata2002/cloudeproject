@@ -1,9 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Component, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Router, UrlTree } from '@angular/router';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { EmmiterComponent } from 'src/app/emmiters/emmiter/emmiter.component';
-import { log } from 'console';
+import { Router,  } from '@angular/router';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -32,6 +31,15 @@ export class ApiComponent {
       }
     }
     )
+  }
+
+  addcustomer(values :string){
+    this.http.post<any>("https://cloudshop-zeta.vercel.app/api/register-customer" , values).subscribe((responce) =>{
+      if (responce.success === true){
+        this.router.navigate(["analytics"])
+
+      }
+    })
   }
   usersignin(value: string) {
     this.http.post<any>("https://cloudshop-zeta.vercel.app/api/login", value).subscribe((response) => {
