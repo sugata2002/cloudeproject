@@ -1,0 +1,115 @@
+mat-card {
+    margin: 5px;
+  }
+  
+  .example-container {
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+  }
+  
+  .mat-table {
+    background-color: none;
+    box-shadow: none;
+  }
+  
+  mat-row:hover {
+    background-color: rgb(245, 245, 245);
+  }
+  
+  .mat-paginator[_ngcontent-c40] {
+    display: block;
+  }
+  
+  button:hover {
+    background-color: rgb(209, 209, 209);
+  }
+  
+  .mat-raised-button {
+    border-radius: 6px;
+  }
+  
+  mat-cell,
+  mat-footer-cell,
+  mat-header-cell {
+    display: block;
+    text-align: center;
+    padding-right: 5px;
+    padding-left: 5px;
+    min-height: auto;
+  }
+  
+  mat-cell:last-of-type,
+  mat-cell:first-of-type,
+  mat-header-cell:first-of-type,
+  mat-header-cell:last-of-type {
+    display: block;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: center;
+    min-height: auto;
+  }
+  
+  .mobile-label {
+    display: none;
+  }
+  
+  @media (max-width: 700px) {
+    .mobile-label {
+      // width: 80px;
+      display: inline-block;
+      font-weight: bold;
+      text-align: left;
+    }
+  
+    .mat-header-row {
+      display: none;
+    }
+  
+    .mat-row {
+      flex-direction: column;
+      align-items: start;
+      padding-top: 8px;
+      padding-right: 8px;
+      padding-bottom: 8px;
+      min-height: 30px;
+    }
+  
+    .mat-row::after,
+    .mat-header-row::after,
+    .mat-footer-row::after {
+      min-height: auto;
+    }
+  
+    mat-cell,
+    mat-footer-cell,
+    mat-header-cell {
+      display: block;
+      text-align: left;
+      padding-right: 5px;
+      padding-left: 5px;
+      padding-bottom: 5px;
+      min-height: auto;
+    }
+  
+    mat-cell:last-of-type,
+    mat-cell:first-of-type,
+    mat-header-cell:first-of-type,
+    mat-header-cell:last-of-type {
+      display: block;
+      text-align: left;
+      padding-right: 5px;
+      padding-left: 5px;
+      padding-bottom: 5px;
+      min-height: auto;
+    }
+  }
+  
+  .errorMessage {
+    font-family: sans-serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #000000;
+  }
+  

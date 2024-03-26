@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 // project import
 import { AdminComponent } from './theme/layout/admin/admin.component';
 import { GuestComponent } from './theme/layout/guest/guest.component';
-import { authgardGuard } from './authgard.guard';
+// import { authgardGuard } from './authgard.guard';
 
 const routes: Routes = [
   {
@@ -16,7 +16,7 @@ const routes: Routes = [
   {
     path: '',
     component: AdminComponent,
-    canActivate:[authgardGuard],
+    // canActivate:[authgardGuard],
     children: [
       // {
       //   path: '',
@@ -35,9 +35,17 @@ const routes: Routes = [
         path: 'chart',
         loadComponent: () => import('./demo/chart & map/core-apex/core-apex.component')
       },
+      // {
+      //   path: 'add-customers',
+      //   loadComponent: () => import('./demo/forms & tables/form-elements/form-elements.component')
+      // },
       {
-        path: 'forms',
-        loadComponent: () => import('./demo/forms & tables/form-elements/form-elements.component')
+        path: 'add-customers',
+        loadChildren: () => import('./modules/customer/customer-add/customer-add.module').then(m => m.CustomerAddModule)
+      },
+      {
+        path: 'view-customers',
+        loadChildren: () => import('./modules/customer/view-customer/view-customer.module').then(m => m.ViewCustomerModule)
       },
       {
         path: 'tables',

@@ -35,10 +35,7 @@ export class ApiComponent {
 
   addcustomer(values :string){
     this.http.post<any>("https://cloudshop-zeta.vercel.app/api/register-customer" , values).subscribe((responce) =>{
-      if (responce.success === true){
-        this.router.navigate(["analytics"])
-
-      }
+    console.log(responce);
     })
   }
   usersignin(value: string) {
