@@ -2,10 +2,11 @@
   <div class="col-sm-12">
     <app-card cardTitle="ADD CUSTOMER" [options]="false">
       <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">@</span>
+        <span class="input-group-text" id="basic-addon1">Name</span>
         <input type="text" class="form-control" placeholder="Gmail" aria-label="Username" aria-describedby="basic-addon1" />
       </div>
       <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon3">Gmail</span>
         <input
           type="text"
           class="form-control"
@@ -17,182 +18,45 @@
       </div>
       <!-- <label for="basic-url" class="form-label">Your vanity URL</label> -->
       <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon3">Address</span>
+        <span class="input-group-text" id="basic-addon3">Phone</span>
         <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" />
       </div>
       <div class="input-group mb-3">
-        <span class="input-group-text">$</span>
+        <span class="input-group-text">Address</span>
         <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" />
-        <span class="input-group-text">.00</span>
+        <!-- <span class="input-group-text">.00</span> -->
       </div>
-      <div class="input-group">
-        <span class="input-group-text">With textarea</span>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Street</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" />
+        <!-- <span class="input-group-text">.00</span> -->
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <h5 class="mt-5">Sizing</h5>
-          <hr />
-          <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" />
-          </div>
-          <div class="input-group mb-3">
-            <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" />
-          </div>
-          <div class="input-group input-group-lg">
-            <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" />
-          </div>
-        </div>
-        <div class="col-md-6">
-          <h5 class="mt-5">Checkboxes and radios</h5>
-          <hr />
-          <div class="input-group mb-3">
-            <div class="input-group-text">
-              <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input" />
-            </div>
-            <input type="text" class="form-control" aria-label="Text input with checkbox" />
-          </div>
-          <div class="input-group">
-            <div class="input-group-text">
-              <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input" />
-            </div>
-            <input type="text" class="form-control" aria-label="Text input with radio button" />
-          </div>
-        </div>
-        <div class="col-md-6">
-          <h5 class="mt-5">Multiple inputs</h5>
-          <hr />
-          <div class="input-group">
-            <span class="input-group-text">First and last name</span>
-            <input type="text" aria-label="First name" class="form-control" />
-            <input type="text" aria-label="Last name" class="form-control" />
-          </div>
-        </div>
-        <div class="col-md-6">
-          <h5 class="mt-5">Multiple addons</h5>
-          <hr />
-          <div class="input-group mb-3">
-            <span class="input-group-text">$</span>
-            <span class="input-group-text">0.00</span>
-            <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" />
-          </div>
-
-          <div class="input-group">
-            <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" />
-            <span class="input-group-text">$</span>
-            <!-- <span class="input-group-text">0.00</span> -->
-          </div>
-        </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">City</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" />
+        <!-- <span class="input-group-text">.00</span> -->
       </div>
-      <h5 class="mt-5">Button Addons</h5>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Pin Code</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" />
+        <!-- <span class="input-group-text">.00</span> -->
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">State</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" />
+        <!-- <span class="input-group-text">.00</span> -->
+      </div>
+    
+      <div class="input-group mb-3">
+        <span class="input-group-text">Country</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" />
+        <!-- <span class="input-group-text">.00</span> -->
+      </div>
+      <button class="btn btn-primary" type="button" id="button-addon1"> ADD CUSTOMER </button>
+     
+      <h5 class="mt-5" id="buttonnav">Button Addons</h5>
       <hr />
-      <div class="row">
-        <div class="col-md-6">
-          <div class="input-group mb-3">
-            <button class="btn btn-primary" type="button" id="button-addon1"> Button </button>
-            <input
-              type="text"
-              class="form-control"
-              placeholder=""
-              aria-label="Example text with button addon"
-              aria-describedby="button-addon1"
-            />
-          </div>
 
-          <div class="input-group mb-3">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Recipient's username"
-              aria-label="Recipient's username"
-              aria-describedby="button-addon2"
-            />
-            <button class="btn btn-primary" type="button" id="button-addon2"> Button </button>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="input-group mb-3">
-            <button class="btn btn-primary" type="button">Button</button>
-            <button class="btn btn-secondary" type="button">Button</button>
-            <input type="text" class="form-control" placeholder="" aria-label="Example text with two button addons" />
-          </div>
-          <div class="input-group">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Recipient's username"
-              aria-label="Recipient's username with two button addons"
-            />
-            <button class="btn btn-primary" type="button">Button</button>
-            <button class="btn btn-secondary" type="button">Button</button>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <h5 class="mt-5">Buttons With Dropdowns</h5>
-          <hr />
-          <div class="input-group mb-3">
-            <div class="input-group-prepend" ngbDropdown placement="bottom-start">
-              <button class="btn btn-primary one-dropdown" ngbDropdownToggle type="button"> Dropdown </button>
-              <div ngbDropdownMenu>
-                <a class="dropdown-item" href="javascript:">Action</a>
-                <a class="dropdown-item" href="javascript:">Another action</a>
-                <a class="dropdown-item" href="javascript:">Something else here</a>
-                <div role="separator" class="dropdown-divider"></div>
-                <a class="dropdown-item" href="javascript:">Separated link</a>
-              </div>
-            </div>
-            <input type="text" class="form-control" aria-label="Text input with dropdown button" />
-          </div>
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" aria-label="Text input with dropdown button" />
-            <div class="input-group-append" ngbDropdown [placement]="'bottom-left'">
-              <button class="btn btn-primary one-dropdown" ngbDropdownToggle type="button"> Dropdown </button>
-              <div ngbDropdownMenu>
-                <a class="dropdown-item" href="javascript:">Action</a>
-                <a class="dropdown-item" href="javascript:">Another action</a>
-                <a class="dropdown-item" href="javascript:">Something else here</a>
-                <div role="separator" class="dropdown-divider"></div>
-                <a class="dropdown-item" href="javascript:">Separated link</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <h5 class="mt-5">Segmented Buttons</h5>
-          <hr />
-          <div class="input-group mb-3" ngbDropdown [placement]="'bottom-left'">
-            <button type="button" class="btn btn-secondary">Action</button>
-            <button type="button" class="btn btn-secondary dropdown-toggle-split" ngbDropdownToggle>
-              <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <div ngbDropdownMenu>
-              <a class="dropdown-item" href="javascript:">Action</a>
-              <a class="dropdown-item" href="javascript:">Another action</a>
-              <a class="dropdown-item" href="javascript:">Something else here</a>
-              <div role="separator" class="dropdown-divider"></div>
-              <a class="dropdown-item" href="javascript:">Separated link</a>
-            </div>
-            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" />
-          </div>
-          <div class="input-group" ngbDropdown>
-            <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" />
-            <button type="button" class="btn btn-secondary">Action</button>
-            <button type="button" class="btn btn-secondary dropdown-toggle-split" ngbDropdownToggle>
-              <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <div ngbDropdownMenu>
-              <a class="dropdown-item" href="javascript:">Action</a>
-              <a class="dropdown-item" href="javascript:">Another action</a>
-              <a class="dropdown-item" href="javascript:">Something else here</a>
-              <div role="separator" class="dropdown-divider"></div>
-              <a class="dropdown-item" href="javascript:">Separated link</a>
-            </div>
-          </div>
-        </div>
-      </div>
       <h3 class="mt-5">Custom Forms</h3>
       <div class="row">
         <div class="col-md-6">
