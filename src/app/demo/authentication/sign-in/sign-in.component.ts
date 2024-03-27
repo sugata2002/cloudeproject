@@ -4,7 +4,7 @@ import { SharedModule } from 'src/app/theme/shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { ApiComponent } from 'src/app/api/api/api.component';
 // import { from } from 'rxjs';
-import { FormBuilder, FormGroup,  } from '@angular/forms';
+import { FormBuilder, FormGroup, } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-in',
@@ -15,20 +15,18 @@ import { FormBuilder, FormGroup,  } from '@angular/forms';
 })
 export default class SignInComponent implements OnInit {
   from !: FormGroup;
- 
-  constructor (private apicom:ApiComponent , private frombuilder:FormBuilder ){}
+
+  constructor(private apicom: ApiComponent, private frombuilder: FormBuilder) { }
   ngOnInit(): void {
     this.from = this.frombuilder.group({
       email: "",
-      password:"",
-      type:0
+      password: "",
+      type: 0
     })
 
-}
-sinin(){
-  const users = this.from.getRawValue()
- console.log(users);
- 
- this.apicom.usersignin(users);
-}
+  }
+  sinin() {
+    const users = this.from.getRawValue()
+    this.apicom.usersignin(users);
+  }
 }

@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-sm-12">
+      <app-card cardTitle="ADD CATEGORY" [options]="false">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">Category Name</span>
+          <input type="text" class="form-control" placeholder="Snacks" aria-label="categoryName"
+            aria-describedby="basic-addon1" [(ngModel)]="categoryTitle" />
+        </div>
+        <button style="margin-top: 1rem;" class="btn btn-primary" type="button" id="button-addon1" (click)="onSubmit()"> ADD CATEGORY </button>
+        <hr />
+      </app-card>
+    </div>
+    <div class="row justify-content-end">
+      <div *ngIf="statusSuccess" class="alert alert-success col-sm-3" role="alert">
+        Category successfully added.
+      </div>
+      <div *ngIf="statusFail" class="alert alert-danger col-sm-3" role="alert">
+        {{errorMsg}}
+      </div>
+    </div>
+  </div>

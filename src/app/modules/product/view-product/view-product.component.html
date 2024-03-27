@@ -1,31 +1,49 @@
 <div class="col-xl-12">
-    <app-card cardTitle="VIEW CUSTOMER" [options]="false" blockClass="table-border-style">
+    <app-card cardTitle="VIEW PRODUCT" [options]="false" blockClass="table-border-style">
         <mat-table #table [dataSource]="dataSource" [class.isMobile]="isMobile" *ngIf="matTable">
-            <ng-container matColumnDef="fullName">
+            <ng-container matColumnDef="productName">
                 <mat-header-cell fxLayoutAlign="center center" *matHeaderCellDef>
-                    Name
+                    Product Name
                 </mat-header-cell>
                 <mat-cell *matCellDef="let element">
                     <!-- <span class="mobile-label">Name :</span> -->
-                    {{ element.name_text }}
+                    {{ element.title_text }}
                 </mat-cell>
             </ng-container>
-            <ng-container matColumnDef="phoneNumber">
+            <ng-container matColumnDef="purchasePrice">
                 <mat-header-cell fxLayoutAlign="center center" *matHeaderCellDef>
-                    Mobile Number
+                    Purchase Price
                 </mat-header-cell>
                 <mat-cell *matCellDef="let element">
                     <!-- <span class="mobile-label">Mobile :</span> -->
-                    {{ element.phoneNumber_text }}
+                    {{ element.purchase_price_text }}
                 </mat-cell>
             </ng-container>
-            <ng-container matColumnDef="email">
+            <ng-container matColumnDef="sellingPrice">
                 <mat-header-cell fxLayoutAlign="center center" *matHeaderCellDef>
-                    Email Address
+                    Selling Price
                 </mat-header-cell>
                 <mat-cell *matCellDef="let element">
                     <!-- <span class="mobile-label">Email :</span> -->
-                    {{ element.email_text }}
+                    {{ element.selling_price_text }}
+                </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="stock">
+                <mat-header-cell fxLayoutAlign="center center" *matHeaderCellDef>
+                    Stock
+                </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    <!-- <span class="mobile-label">Email :</span> -->
+                    {{ element.stock_text }}
+                </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="category">
+                <mat-header-cell fxLayoutAlign="center center" *matHeaderCellDef>
+                   Category
+                </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    <!-- <span class="mobile-label">Email :</span> -->
+                    {{ element.category_text }}
                 </mat-cell>
             </ng-container>
             <ng-container matColumnDef="actions">

@@ -50,6 +50,54 @@ export const NavigationItems: NavigationItem[] = [
       },
     ]
   },
+  {
+    id: 'category',
+    title: 'Category',
+    type: 'collapse',
+    icon: 'feather icon-file-text',
+    children: [
+      {
+        id: 'add category',
+        title: 'Add category',
+        type: 'item',
+        url: '/add-category',
+        classes: 'nav-item',
+        icon: 'feather icon-file-text'
+      },
+      {
+        id: 'view category',
+        title: 'View category',
+        type: 'item',
+        url: '/view-category',
+        classes: 'nav-item',
+        icon: 'feather icon-file-text'
+      },
+    ]
+  },
+  {
+    id: 'product',
+    title: 'Product',
+    type: 'collapse',
+    icon: 'feather icon-file-text',
+    children: [
+      {
+        id: 'add product',
+        title: 'Add product',
+        type: 'item',
+        url: '/add-product',
+        classes: 'nav-item',
+        icon: 'feather icon-file-text'
+      },
+      {
+        id: 'view product',
+        title: 'View product',
+        type: 'item',
+        url: '/view-product',
+        classes: 'nav-item',
+        icon: 'feather icon-file-text'
+      },
+    ]
+  },
   // {
   //   id: 'ui-component',
   //   title: 'Ui Component',

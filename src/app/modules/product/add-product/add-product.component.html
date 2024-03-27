@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-sm-12">
+      <app-card cardTitle="ADD PRODUCT" [options]="false">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">Product Name</span>
+          <input type="text" class="form-control" placeholder="Kurkure Masala Munch" aria-label="Username"
+            aria-describedby="basic-addon1" [(ngModel)]="productName" />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon3">Category</span>
+          <select class="form-select" aria-label="Default select example" [(ngModel)]="categoryId">
+            <!-- <option selected>Open this select menu</option> -->
+            <option *ngFor="let category of categories" [value]="category['_id']">{{category['title']}}</option>
+          </select>
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon3">Purchase price</span>
+          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3"
+            [(ngModel)]="purchasePrice" />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">Selling price</span>
+          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"
+            [(ngModel)]="sellingPrice" />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">Stock</span>
+          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" [(ngModel)]="stock" />
+        </div>
+        <button class="btn btn-primary" type="button" id="button-addon1" (click)="onSubmit()"> ADD PRODUCT </button>
+        <hr />
+      </app-card>
+    </div>
+    <div class="row justify-content-end">
+      <div *ngIf="statusSuccess" class="alert alert-success col-sm-3" role="alert">
+        Product successfully added.
+      </div>
+      <div *ngIf="statusFail" class="alert alert-danger col-sm-3" role="alert">
+        {{errorMsg}}
+      </div>
+    </div>
+  </div>

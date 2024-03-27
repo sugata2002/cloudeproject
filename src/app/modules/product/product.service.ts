@@ -6,7 +6,7 @@ import { environment } from "src/environments/environment";
 @Injectable({
   providedIn: "root",
 })
-export class CustomerService {
+export class ProductService {
   public static dialogResult = true;
   headers: any;
 
@@ -21,28 +21,37 @@ export class CustomerService {
     // };
   }
 
-  getCustomer(): Observable<any> {
+  getProduct(): Observable<any> {
     return this.http.get<any>(
-      environment.baseUrl + "/api/customers",
+      environment.baseUrl + "/api/view-product",
       {
         headers: this.headers,
       },
     );
   }
 
-  postCustomer(body: string): Observable<any> {
+  postProduct(body: string): Observable<any> {
     return this.http.post<any>(
-      environment.baseUrl + "/api/register-customer",
+      environment.baseUrl + "/api/add-product",
       body
     );
   }
 
-  deleteCustomer(id: any): Observable<any> {
+  deleteProduct(id: any): Observable<any> {
     return this.http.get<any>(
       environment.baseUrl + "/api/delete-customers/" + id,
       {
         headers: this.headers,
         // params: { id: id },
+      },
+    );
+  }
+
+  getCategory(): Observable<any> {
+    return this.http.get<any>(
+      environment.baseUrl + "/api/view-product-category",
+      {
+        headers: this.headers,
       },
     );
   }

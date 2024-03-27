@@ -27,6 +27,7 @@ import { SharedModule } from './theme/shared/shared.module';
 import { ApiComponent } from './api/api/api.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EmmiterComponent } from './emmiters/emmiter/emmiter.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 // import { LandingpageComponent } from './landingpage/landingpage.component';
 // import {ApiComponent}
 
@@ -51,9 +52,8 @@ import { EmmiterComponent } from './emmiters/emmiter/emmiter.component';
     ApiComponent,
     EmmiterComponent,
     // LandingpageComponent,
-
   ],
-  imports: [BrowserModule, AppRoutingModule, SharedModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule, HttpClientModule ],
+  imports: [BrowserModule, AppRoutingModule, SharedModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule, HttpClientModule, MatSnackBarModule],
   providers: [ ApiComponent,],
   bootstrap: [AppComponent]
 })

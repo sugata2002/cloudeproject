@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CustomerAddComponent } from './customer-add.component';
+import { AddCategoryComponent } from './add-category.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { RouterModule } from '@angular/router';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { ColorPickerModule } from 'ngx-color-picker';
 import { SharedModule } from 'src/app/theme/shared/shared.module';
-import { RouterModule } from '@angular/router';
-import { CustomerAddRoutes } from './customer-add.routing';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { AddCategoryRoutes } from './add-category.routing';
+
 
 
 @NgModule({
   declarations: [
-    CustomerAddComponent
+    AddCategoryComponent
   ],
   imports: [
-    RouterModule.forChild(CustomerAddRoutes),
+    RouterModule.forChild(AddCategoryRoutes),
     CommonModule,
     SharedModule,
     NgbDropdownModule,
@@ -22,4 +23,4 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatSnackBarModule
   ]
 })
-export class CustomerAddModule { }
+export class AddCategoryModule { }
