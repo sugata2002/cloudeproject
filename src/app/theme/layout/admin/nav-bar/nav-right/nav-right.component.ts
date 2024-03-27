@@ -40,14 +40,11 @@ export class NavRightComponent implements DoCheck,OnInit {
 
   ngOnInit(){
     const localName=localStorage.getItem('name')
-    console.log("====>"+localName)
     if(localName=="null"||localName=='undefined'||localName==''){
       this.name = "N/A";
     }else{
-      console.log("dhuke gelam name ===> ",localName);   
       this.name = localStorage.getItem('name')??''
     }
-    console.log("name ===> ",this.name);
   }
 
   // public method

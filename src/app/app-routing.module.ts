@@ -48,6 +48,22 @@ const routes: Routes = [
         loadChildren: () => import('./modules/customer/view-customer/view-customer.module').then(m => m.ViewCustomerModule)
       },
       {
+        path: 'add-category',
+        loadChildren: () => import('./modules/category/add-category/add-category.module').then(m => m.AddCategoryModule)
+      },
+      {
+        path: 'view-category',
+        loadChildren: () => import('./modules/category/view-category/view-category.module').then(m => m.ViewCategoryModule)
+      },
+      {
+        path: 'add-product',
+        loadChildren: () => import('./modules/product/add-product/add-product.module').then(m => m.AddProductModule)
+      },
+      {
+        path: 'view-product',
+        loadChildren: () => import('./modules/product/view-product/view-product.module').then(m => m.ViewProductModule)
+      },
+      {
         path: 'tables',
         loadComponent: () => import('./demo/forms & tables/tbl-bootstrap/tbl-bootstrap.component')
       },

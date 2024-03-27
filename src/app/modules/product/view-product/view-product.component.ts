@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { MatTableDataSource } from "@angular/material/table";
-import { CustomerService } from '../customer.service';
+import { MatTableDataSource } from '@angular/material/table';
+import { ProductService } from '../product.service';
 
 @Component({
-  selector: 'app-view-customer',
-  templateUrl: './view-customer.component.html',
-  styleUrls: ['./view-customer.component.scss']
+  selector: 'app-view-product',
+  templateUrl: './view-product.component.html',
+  styleUrls: ['./view-product.component.scss']
 })
-export class ViewCustomerComponent {
-  displayedColumns: string[] = ["fullName", "phoneNumber", "email", "actions"];
+export class ViewProductComponent {
+  displayedColumns: string[] = ["productName", "purchasePrice", "sellingPrice", "stock", "category", "actions"];
   dataSource!: MatTableDataSource<any>;
   matTable = true;
   loadProgress = false;
@@ -16,7 +16,7 @@ export class ViewCustomerComponent {
   isMobile = true;
 
   constructor(
-    private service: CustomerService,
+    private service: ProductService,
   ) {}
 
   ngOnInit(): void {
@@ -25,7 +25,7 @@ export class ViewCustomerComponent {
 
   getCustomers(): void {
     this.loadProgress = true;
-    this.service.getCustomer().subscribe(
+    this.service.getProduct().subscribe(
       (success) => {
         try {
           if (success.success) {
@@ -51,7 +51,7 @@ export class ViewCustomerComponent {
 
   onDelete(id: any): void {
     if (window.confirm("Are you sure you want to delete?")) {
-      this.service.deleteCustomer(id).subscribe((success) => {
+      this.service.deleteProduct(id).subscribe((success) => {
         if (success.status) {
           this.onRefresh();
         }
@@ -64,17 +64,26 @@ export class ViewCustomerComponent {
     try {
       if (data && data.length) {
         for (let i = 0; i < data.length; i++) {
-          data[i].name_text = "N/A";
-          data[i].phoneNumber_text = "N/A";
-          data[i].email_text = "N/A";
-          if (data[i].name && data[i].name.length) {
-            data[i].name_text = data[i].name;
+          data[i].title_text = "N/A";
+          data[i].purchase_price_text = "N/A";
+          data[i].selling_price_text = "N/A";
+          data[i].stock_text = "N/A";
+          data[i].category_text = "N/A";
+
+          if (data[i].title && data[i].title.length) {
+            data[i].title_text = data[i].title;
           }
-          if (data[i].phone && data[i].phone.length) {
-            data[i].phoneNumber_text = data[i].phone;
+          if (data[i].purchase_price && data[i].purchase_price.length) {
+            data[i].purchase_price_text = data[i].purchase_price;
           }
-          if (data[i].email && data[i].email.length) {
-            data[i].email_text = data[i].email;
+          if (data[i].selling_price && data[i].selling_price.length) {
+            data[i].selling_price_text = data[i].selling_price;
+          }
+          if (data[i].stock && data[i].stock.length) {
+            data[i].stock_text = data[i].stock;
+          }
+          if (data[i].productcatagory.length){
+            data[i].category_text = data[i].productcatagory[0].title;
           }
         }
         this.matTable = true;

@@ -1,34 +1,16 @@
 <div class="col-xl-12">
-    <app-card cardTitle="VIEW CUSTOMER" [options]="false" blockClass="table-border-style">
+    <app-card cardTitle="VIEW CATEGORY" [options]="false" blockClass="table-border-style">
         <mat-table #table [dataSource]="dataSource" [class.isMobile]="isMobile" *ngIf="matTable">
-            <ng-container matColumnDef="fullName">
+            <ng-container matColumnDef="categoryName">
                 <mat-header-cell fxLayoutAlign="center center" *matHeaderCellDef>
-                    Name
+                    Category Name
                 </mat-header-cell>
                 <mat-cell *matCellDef="let element">
                     <!-- <span class="mobile-label">Name :</span> -->
-                    {{ element.name_text }}
+                    {{ element.title_text }}
                 </mat-cell>
             </ng-container>
-            <ng-container matColumnDef="phoneNumber">
-                <mat-header-cell fxLayoutAlign="center center" *matHeaderCellDef>
-                    Mobile Number
-                </mat-header-cell>
-                <mat-cell *matCellDef="let element">
-                    <!-- <span class="mobile-label">Mobile :</span> -->
-                    {{ element.phoneNumber_text }}
-                </mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="email">
-                <mat-header-cell fxLayoutAlign="center center" *matHeaderCellDef>
-                    Email Address
-                </mat-header-cell>
-                <mat-cell *matCellDef="let element">
-                    <!-- <span class="mobile-label">Email :</span> -->
-                    {{ element.email_text }}
-                </mat-cell>
-            </ng-container>
-            <ng-container matColumnDef="actions">
+            <!-- <ng-container matColumnDef="actions">
                 <mat-header-cell fxLayoutAlign="center center" *matHeaderCellDef>
                     Actions
                 </mat-header-cell>
@@ -39,7 +21,7 @@
                         </button>
                     </div>
                 </mat-cell>
-            </ng-container>
+            </ng-container> -->
             <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
             <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
         </mat-table>

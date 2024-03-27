@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { MatTableDataSource } from "@angular/material/table";
-import { CustomerService } from '../customer.service';
+import { CategoryService } from '../category.service';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
-  selector: 'app-view-customer',
-  templateUrl: './view-customer.component.html',
-  styleUrls: ['./view-customer.component.scss']
+  selector: 'app-view-category',
+  templateUrl: './view-category.component.html',
+  styleUrls: ['./view-category.component.scss']
 })
-export class ViewCustomerComponent {
-  displayedColumns: string[] = ["fullName", "phoneNumber", "email", "actions"];
+export class ViewCategoryComponent {
+  displayedColumns: string[] = ["categoryName",];
   dataSource!: MatTableDataSource<any>;
   matTable = true;
   loadProgress = false;
@@ -16,16 +16,16 @@ export class ViewCustomerComponent {
   isMobile = true;
 
   constructor(
-    private service: CustomerService,
+    private service: CategoryService,
   ) {}
 
   ngOnInit(): void {
-    this.getCustomers();
+    this.getCategory();
   }
 
-  getCustomers(): void {
+  getCategory(): void {
     this.loadProgress = true;
-    this.service.getCustomer().subscribe(
+    this.service.getCategory().subscribe(
       (success) => {
         try {
           if (success.success) {
@@ -51,7 +51,7 @@ export class ViewCustomerComponent {
 
   onDelete(id: any): void {
     if (window.confirm("Are you sure you want to delete?")) {
-      this.service.deleteCustomer(id).subscribe((success) => {
+      this.service.deleteCategory(id).subscribe((success) => {
         if (success.status) {
           this.onRefresh();
         }
@@ -64,17 +64,9 @@ export class ViewCustomerComponent {
     try {
       if (data && data.length) {
         for (let i = 0; i < data.length; i++) {
-          data[i].name_text = "N/A";
-          data[i].phoneNumber_text = "N/A";
-          data[i].email_text = "N/A";
-          if (data[i].name && data[i].name.length) {
-            data[i].name_text = data[i].name;
-          }
-          if (data[i].phone && data[i].phone.length) {
-            data[i].phoneNumber_text = data[i].phone;
-          }
-          if (data[i].email && data[i].email.length) {
-            data[i].email_text = data[i].email;
+          data[i].title_text = "N/A";
+          if (data[i].title && data[i].title.length) {
+            data[i].title_text = data[i].title;
           }
         }
         this.matTable = true;
@@ -95,7 +87,7 @@ export class ViewCustomerComponent {
   }
 
   onRefresh(): void {
-    this.getCustomers();
+    this.getCategory();
   }
 
   // onDelete(id: any): void {
