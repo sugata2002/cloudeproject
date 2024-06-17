@@ -25,4 +25,15 @@ export class NavBarComponent {
       this.NavCollapse.emit();
     }
   }
+  cards = [
+    {
+      background: 'bg-c-blue',
+      title: 'Orders Received',
+      icon: 'icon-shopping-cart',
+      text: 'Completed Orders',
+      number: '486',
+      no: '351'
+    },
+    
+  ];
 }
